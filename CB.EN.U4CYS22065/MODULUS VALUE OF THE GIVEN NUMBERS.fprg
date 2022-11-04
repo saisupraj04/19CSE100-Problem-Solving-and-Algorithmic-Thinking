@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22065"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:40:17 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTA0OzEwOjIzOjMxIEFNOzMwNDY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTA0OzEwOjQwOjE3IEFNOzM7MzE1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d" type="Integer" array="False" size=""/>
+            <comment text="declaring the values for dividends aND DIVISORS&#13;&#10;"/>
+            <output expression="&quot;entr thr value of the dividend&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;enter the value of divisor&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="OBTAINING THE VALUES OF QUOTIENT&#13;&#10;"/>
+            <assign variable="d" expression="a/b"/>
+            <assign variable="c" expression="a-(b*d)"/>
+            <output expression="&quot;the modulus value &quot;" newline="True"/>
+            <output expression="c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22065"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:53:05 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTA0OzA5OjMxOjM0IEFNOzMwNTY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTA0OzA5OjUzOjA1IEFNOzE7MzE2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <comment text="declaring the values of the coefficents "/>
+            <output expression="&quot;enter the value of coeffiecent of x^2&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;enter the value of the coeffiecent of x&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;enter the value of constant&quot;" newline="True"/>
+            <input variable="c"/>
+            <comment text="declaring the values for roots"/>
+            <declare name="x, y" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="(-b+sqrt(b^2-4*a*c))/2*a"/>
+            <output expression="&quot;the value of first root &quot;" newline="True"/>
+            <output expression="x" newline="True"/>
+            <assign variable="y" expression="(-b-sqrt(b^2-4*a*c))/2*a"/>
+            <output expression="&quot;the value of the second root&quot;" newline="True"/>
+            <output expression="y" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

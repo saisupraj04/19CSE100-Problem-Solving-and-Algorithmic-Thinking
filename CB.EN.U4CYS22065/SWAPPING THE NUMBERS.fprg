@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22065"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:54:20 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTA0OzEwOjQ2OjQzIEFNOzMwNTQ="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTA0OzEwOjU0OjIwIEFNOzQ7MzE1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, B" type="Integer" array="False" size=""/>
+            <comment text="DECLARING THE VALUES FOR A AND B&#13;&#10;"/>
+            <output expression="&quot;ENTER THE VALUE OF A&quot;" newline="True"/>
+            <input variable="A"/>
+            <output expression="&quot;ENTER THE VALUE OF B&quot;" newline="True"/>
+            <input variable="B"/>
+            <comment text="SWAPPING THE VALUES OF A AND B"/>
+            <assign variable="B" expression="A*B"/>
+            <assign variable="A" expression="B/A"/>
+            <assign variable="B" expression="B/A"/>
+            <output expression="&quot;THE NEW VALUE OF A IS &quot;&amp;A" newline="True"/>
+            <output expression="&quot;THE NEW VALUE OF B IS&quot;&amp;B" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
