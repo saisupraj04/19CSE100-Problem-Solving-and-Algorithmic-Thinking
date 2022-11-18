@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22065"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:47:23 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTE4OzA5OjQ2OjUzIEFNOzMwNjg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTE4OzEwOjQ3OjIzIEFNOzE7MzE2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ACCOUNTNUMBER" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR ACCOUNT NUMBER&quot;" newline="True"/>
+            <input variable="ACCOUNTNUMBER"/>
+            <declare name="NAME" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR NAME&quot;" newline="True"/>
+            <input variable="NAME"/>
+            <declare name="OPT1, OPT2, OPT3, OPT4" type="Integer" array="False" size=""/>
+            <output expression="&quot;PLEASE SELECT AN OPTION&quot;" newline="True"/>
+            <output expression="&quot;OPT1=CASHWITHDRAWL&quot;&amp;&#13;&#10;&quot;OPT2=ACCOUNTBALANCE&quot;&amp;&#13;&#10;&quot;OPT3=CHANGEPIN&quot;&amp;&#13;&#10;&quot;OPT4=DEPOSITAMOUNT&quot;" newline="True"/>
+            <declare name="OPT" type="Integer" array="False" size=""/>
+            <input variable="OPT"/>
+            <if expression="OPT=1">
+                <then>
+                    <declare name="PINNUMBER" type="Integer" array="False" size=""/>
+                    <assign variable="PINNUMBER" expression="12345"/>
+                    <output expression="&quot;ENTER YOUR PIN NUMBER&quot;" newline="True"/>
+                    <input variable="PINNUMBER"/>
+                    <if expression="PINNUMBER=12345">
+                        <then>
+                            <declare name="BALANCE" type="Integer" array="False" size=""/>
+                            <assign variable="BALANCE" expression="1500"/>
+                            <declare name="WITHDRAWL" type="Integer" array="False" size=""/>
+                            <output expression="&quot;ENTER THE AMOUNT YOU NEED&quot;" newline="True"/>
+                            <input variable="WITHDRAWL"/>
+                            <if expression="WITHDRAWL&lt;=1500">
+                                <then>
+                                    <output expression="&quot;YOUR TRANSACTION IS BEING PROCESSED&quot;" newline="True"/>
+                                    <declare name="NEWBALANCE" type="Integer" array="False" size=""/>
+                                    <assign variable="NEWBALANCE" expression="BALANCE-WITHDRAWL"/>
+                                    <output expression="&quot;YOUR BALANCE AMOUNT IS&quot;" newline="True"/>
+                                    <output expression="NEWBALANCE" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;YOU DONT HAVE ENOUGH FUNDS&quot;" newline="True"/>
+                                    <output expression="&quot;PLEASE ENTER A NEWAMOUNT&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;WORNG PIN NUMBER&quot;" newline="True"/>
+                            <output expression="&quot;PLEASE ENETR CORRECT PIN NUMBER&quot;" newline="True"/>
+                            <input variable="PINNUMBER"/>
+                            <declare name="BALANCE" type="Integer" array="False" size=""/>
+                            <assign variable="BALANCE" expression="1500"/>
+                            <declare name="WITHDRAWL" type="Integer" array="False" size=""/>
+                            <output expression="&quot;ENTER THE AMOUNT YOU NEED&quot;" newline="True"/>
+                            <input variable="WITHDRAWL"/>
+                            <if expression="WITHDRAWL&lt;=1500">
+                                <then>
+                                    <output expression="&quot;YOUR TRANSACTION IS BEIGN PROCESSED&quot;" newline="True"/>
+                                    <declare name="NEWBALANCE" type="Integer" array="False" size=""/>
+                                    <assign variable="NEWBALANCE" expression="BALANCE-WITHDRAWL"/>
+                                    <output expression="&quot;YOUR NEW BALNACE IS &quot;" newline="True"/>
+                                    <output expression="NEWBALANCE" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="OPT=2">
+                        <then>
+                            <declare name="BALANCE" type="Integer" array="False" size=""/>
+                            <assign variable="BALANCE" expression="1500"/>
+                            <output expression="&quot;YOUR ACCOUNT BALNCE IS&quot;" newline="True"/>
+                            <output expression="BALANCE" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="OPT=3">
+                                <then>
+                                    <declare name="PINNUMBER, NEWPINNUMBER" type="Integer" array="False" size=""/>
+                                    <assign variable="PINNUMBER" expression="12345"/>
+                                    <output expression="&quot;ENTER YOUR PINNUMBER&quot;" newline="True"/>
+                                    <input variable="PINNUMBER"/>
+                                    <output expression="&quot;ENTER THE NEW PINNUMBER&quot;" newline="True"/>
+                                    <input variable="NEWPINNUMBER"/>
+                                    <output expression="&quot;YOUR NEW PIN NUMBER IS&quot;" newline="True"/>
+                                    <output expression="NEWPINNUMBER" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="OPT=4">
+                                        <then>
+                                            <declare name="BALANCE" type="Integer" array="False" size=""/>
+                                            <assign variable="BALANCE" expression="1500"/>
+                                            <declare name="DEPOSITAMOUNT" type="Integer" array="False" size=""/>
+                                            <output expression="&quot;ENTER THE AMOUNT YOU WANTED TO DEPOSIT&quot;" newline="True"/>
+                                            <input variable="DEPOSITAMOUNT"/>
+                                            <declare name="NEWBALANCE" type="Integer" array="False" size=""/>
+                                            <assign variable="NEWBALANCE" expression="BALANCE +DEPOSITAMOUNT"/>
+                                            <output expression="&quot;YOUR NEW BALANCE IS&quot;" newline="True"/>
+                                            <output expression="NEWBALANCE" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

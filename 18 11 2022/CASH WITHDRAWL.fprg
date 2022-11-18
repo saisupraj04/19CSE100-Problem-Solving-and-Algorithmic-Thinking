@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22065"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 09:46:51 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTE4OzA5OjAxOjUxIEFNOzMwNTc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTExLTE4OzA5OjQ2OjUxIEFNOzI7MzE3NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ACCOUNTNUMBER" type="Integer" array="False" size=""/>
+            <comment text="DECLARING VARIQBLES LIKE BALANCE AMOUNT ACCOUNT NUMBER AND NAME "/>
+            <output expression="&quot;ENTER YOUR ACCOUNT NUMBER&quot;" newline="True"/>
+            <input variable="ACCOUNTNUMBER"/>
+            <declare name="NAME" type="String" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR NAME&quot;" newline="True"/>
+            <input variable="NAME"/>
+            <declare name="BALANCEAMOUNT" type="Integer" array="False" size=""/>
+            <comment text="ASSINING A VALUE FOR BALANCE AMOUNT &#13;&#10;"/>
+            <assign variable="BALANCEAMOUNT" expression="1000"/>
+            <output expression="BALANCEAMOUNT" newline="True"/>
+            <declare name="WITHDRAWL" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE AMOUNT YOU NEED&quot;" newline="True"/>
+            <input variable="WITHDRAWL"/>
+            <comment text="GIVING IF STATE,MENTS FOR WITHDRAWLS"/>
+            <if expression="WITHDRAWL&lt;=1000">
+                <then>
+                    <declare name="PINNUMBER" type="Integer" array="False" size=""/>
+                    <output expression="&quot;ENTER YOR PIN NUMBER&quot;" newline="True"/>
+                    <assign variable="PINNUMBER" expression="12345"/>
+                    <input variable="PINNUMBER"/>
+                    <if expression="PINNUMBER=12345">
+                        <then>
+                            <output expression="&quot;YOUR TRANSACTION IS BEING PROCESSED&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;ENTER THE CORRECT PIN NUMBER&quot;" newline="True"/>
+                            <input variable="PINNUMBER"/>
+                            <if expression="PINNUMBER=12345">
+                                <then>
+                                    <output expression="&quot;YOUR TRANSACTION IS BEING PROCESSED&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;YOUR TRANSACTION IS DECLINED &quot;" newline="True"/>
+                                    <output expression="&quot;MULTIPLE FAILURE ATTEMPTS&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <declare name="AVALIABLEBALANCE" type="Integer" array="False" size=""/>
+                    <output expression="&quot;YOUR AVALIABLE BALANCE IS &quot;" newline="True"/>
+                    <assign variable="AVALIABLEBALANCE" expression="BALANCEAMOUNT -WITHDRAWL"/>
+                    <output expression="AVALIABLEBALANCE" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;YOU DONT HAVE ENOUGH MONEY &quot;" newline="True"/>
+                    <output expression="&quot;PLEASE ENTER NEW AMOUNT&quot;" newline="True"/>
+                    <input variable="WITHDRAWL"/>
+                    <if expression="WITHDRAWL&lt;=1000">
+                        <then>
+                            <declare name="PINNUMBER" type="Integer" array="False" size=""/>
+                            <output expression="&quot;ENTER YOUR PIN NUMBER&quot;" newline="True"/>
+                            <input variable="PINNUMBER"/>
+                            <if expression="PINNUMBER=12345">
+                                <then>
+                                    <output expression="&quot;YOUR TRANSACTION IS BEING PROCESSED&quot;" newline="True"/>
+                                    <declare name="AVALIABLEBALANCE" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;YOUR AVALIABLE BALNCE IS&quot;" newline="True"/>
+                                    <assign variable="AVALIABLEBALANCE" expression="BALANCEAMOUNT-WITHDRAWL"/>
+                                    <output expression="AVALIABLEBALANCE" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;YOUR TRANSACTION IS DECLINED&quot;" newline="True"/>
+                                    <output expression="&quot;MULTIPLE FAILURE ATTEMPTS&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
