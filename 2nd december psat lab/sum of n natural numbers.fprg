@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22065"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:20:00 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTEyLTAyOzA4OjU2OjAwIEFNOzMwNTQ="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTEyLTAyOzA5OjIwOjAwIEFNOzM7MzE1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;please enetr the value of n &quot;" newline="True"/>
+            <input variable="n"/>
+            <while expression="n&lt;=10">
+                <assign variable="n" expression="(n*(n+1))/2"/>
+                <output expression="&quot;the sum of n numbers from 1 is &quot;&amp;n" newline="True"/>
+            </while>
+            <output expression="&quot;invalid input&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22065"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:29:35 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTEyLTAyOzEwOjIyOjE5IEFNOzMwNTA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NTsyMDIyMjNNQVlDMDEwMjsyMDIyLTEyLTAyOzEwOjI5OjM1IEFNOzE7MzE2Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <comment text="wheni =1 j takes all the values from 1 to 10 and add them displayts the addition table of it&#13;&#10;similarly the process continues upto i =10"/>
+                <output expression="&quot;the additio table of &quot;&amp;i&amp;&quot;is&quot;" newline="True"/>
+                <for variable="j" start="1" end="10" direction="inc" step="1">
+                    <comment text="displaying the addition table of every number upto 10"/>
+                    <output expression="i&amp;&quot;+&quot;&amp;J&amp;&quot;+&quot;&amp;j&amp;&quot;=&quot;&amp;j" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
