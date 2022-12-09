@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Kolluru Srinivas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:23:18 AM"/>
+        <attribute name="created" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMi0xMi0wOTsxMTowMToyMSBBTTszOTMw"/>
+        <attribute name="edited" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMi0xMi0wOTsxMToyMzoxOCBBTTsxOzQwNDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="DECLARING THE TWO VARIABLES I AND MAX"/>
+            <declare name="I, MAX" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="True" size="5"/>
+            <output expression="&quot;ENTER FIVE NUMBERS&quot;" newline="True"/>
+            <comment text="WE WILL GIVE THE VALUES FOR THE GIVEN ARRAYS"/>
+            <for variable="I" start="0" end="4" direction="inc" step="1">
+                <input variable="A[I]"/>
+            </for>
+            <assign variable="MAX" expression="A[0]"/>
+            <comment text="NOW HERE WE ARE CONSIDERING THAT A[0] IS THE MAXIMUM VALLUE SO WHEN WE TAKE THE IF STATEMENT WHENEVER THE MAX VALUE IS LESS THAN THE A[I] VALUE NEW MAX VALUE WILL BE ASSIGNED MAX VALUE =A[I] NOW IF THE CONDITION FOLLOWS TILL I=4 THEN THE LARGEST VALUE WILL BE SHOWN&#13;&#10;"/>
+            <for variable="I" start="1" end="4" direction="inc" step="1">
+                <if expression="MAX&lt;A[I]">
+                    <then>
+                        <assign variable="MAX" expression="A[I]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;THE GREATEST NUMBER IS &quot;&amp;MAX" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Kolluru Srinivas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:00:43 AM"/>
+        <attribute name="created" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMi0xMi0wOTsxMDozODozMSBBTTszOTQw"/>
+        <attribute name="edited" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMi0xMi0wOTsxMTowMDo0MyBBTTsxOzQwNDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="INDEX, N" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE NUMBER OF STUDENTS&quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="ROLLNUM, MARKSS, AVERAGEMARKS, NUM, TOTALMARKS" type="Real" array="False" size=""/>
+            <assign variable="NUM" expression="0"/>
+            <for variable="INDEX" start="0" end="N-1" direction="inc" step="1">
+                <output expression="&quot;ENTER THE ROLL NUMBER OF STUDENT[&quot;&amp;INDEX+1&amp;&quot;]&quot;" newline="True"/>
+                <input variable="ROLLNUM"/>
+                <declare name="SUBJECT" type="Integer" array="False" size=""/>
+                <for variable="SUBJECT" start="1" end="5" direction="inc" step="1">
+                    <output expression="&quot;ENTER THE MARKS OF THE STUDENT IN FIRST SUBJECTNO&quot;&amp;SUBJECT" newline="True"/>
+                    <input variable="MARKSS"/>
+                    <assign variable="NUM" expression="NUM+MARKSS"/>
+                </for>
+                <assign variable="TOTALMARKS" expression="NUM"/>
+                <output expression="&quot;ROLLNUMBER&quot;&amp;ROLLNUM" newline="True"/>
+                <output expression="&quot;TOTALMARKS=&quot;&amp;TOTALMARKS" newline="True"/>
+                <assign variable="AVERAGEMARKS" expression="TOTALMARKS/5"/>
+                <output expression="&quot;AVERAGE MARKS=&quot;&amp;AVERAGEMARKS" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

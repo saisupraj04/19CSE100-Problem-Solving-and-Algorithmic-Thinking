@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Kolluru Srinivas"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:57:45 AM"/>
+        <attribute name="created" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMi0xMi0wOTswOTo0ODo0MyBBTTszOTUy"/>
+        <attribute name="edited" value="S29sbHVydSBTcmluaXZhcztERVNLVE9QLTcwQ045TFQ7MjAyMi0xMi0wOTswOTo1Nzo0NSBBTTsyOzQwNjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="INDEX" type="Integer" array="False" size=""/>
+            <declare name="NUMS" type="Integer" array="True" size="10"/>
+            <declare name="NUM" type="Integer" array="False" size=""/>
+            <for variable="INDEX" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;PLEASE ENTER THE NUMBER FOR INDEX=[&quot;&amp;INDEX&amp;&quot;]&quot;" newline="True"/>
+                <input variable="NUM"/>
+                <assign variable="NUMS[INDEX]" expression="NUM"/>
+            </for>
+            <output expression="&quot;ARRAY CONTENTS ARE&quot;" newline="True"/>
+            <for variable="INDEX" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;NUMS[&quot;&amp;INDEX&amp;&quot;]=&quot;&amp;NUMS[INDEX]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
